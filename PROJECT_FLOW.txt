@@ -1,0 +1,20 @@
+IBM Internship AI HR Recruitment Assistant
+
+Flow:
+HR -> Job Description + Resume
+   -> Resume text extraction
+   -> RAG retrieves HR knowledge
+   -> Agent decides when to use tools
+   -> Skill extraction tool
+   -> Match score tool
+   -> LLM analysis
+   -> Recruitment report + interview questions
+
+Main files:
+app.py                 Streamlit UI
+ingest.py              Builds Chroma RAG database
+hr_assistant/agent.py  LangChain agent
+hr_assistant/tools.py  Agent tools
+hr_assistant/rag.py    Vector database + retrieval
+hr_assistant/document_loader.py  PDF/DOCX/TXT extraction
+data/                  Demo resume, JD and HR knowledge

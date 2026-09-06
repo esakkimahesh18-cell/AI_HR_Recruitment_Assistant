@@ -1,0 +1,9 @@
+RECRUITMENT ASSISTANT KNOWLEDGE BASE
+
+1. Resume screening should be based on job-related qualifications and skills.
+2. Protected characteristics must not be used for candidate scoring or ranking.
+3. AI recommendations are advisory and must be reviewed by a human recruiter.
+4. Interview questions should relate to the job description and candidate experience.
+5. Missing skills should be presented as development gaps, not as personal judgments.
+6. Candidate information should be handled securely and only for legitimate recruitment purposes.
+7. A match score is an aid for prioritization and is not a final hiring decision.

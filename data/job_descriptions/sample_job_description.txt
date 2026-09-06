@@ -1,0 +1,14 @@
+PYTHON / AI ENGINEER – ENTRY LEVEL
+
+Responsibilities:
+- Develop Python applications and APIs.
+- Work with SQL databases.
+- Assist with machine learning projects.
+- Build LLM and RAG prototypes.
+- Use Git for source control.
+
+Required Skills:
+Python, SQL, Machine Learning, Git, RAG, FastAPI
+
+Good to Have:
+LangChain, Docker, AWS

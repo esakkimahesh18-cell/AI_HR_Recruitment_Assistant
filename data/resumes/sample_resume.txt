@@ -1,0 +1,20 @@
+ARJUN KUMAR
+Email: arjun@example.com
+
+PROFILE
+Entry-level AI and ML graduate interested in Python backend development and
+machine learning applications.
+
+SKILLS
+Python, SQL, Machine Learning, Pandas, NumPy, Git, LangChain, RAG
+
+PROJECTS
+1. Student Performance Prediction
+Built a machine learning model using Python and scikit-learn.
+
+2. AI FAQ Assistant
+Built a small RAG application using LangChain and a vector database.
+
+EDUCATION
+B.Tech – Artificial Intelligence and Machine Learning
+CGPA: 7.4

@@ -1,0 +1,9 @@
+INTERVIEW GUIDELINES
+
+For technical roles:
+- Ask questions about required technical skills.
+- Ask candidates to explain relevant projects.
+- Include at least one problem-solving question.
+- Avoid questions unrelated to job requirements.
+- Do not ask about protected personal characteristics.
+- Use a consistent evaluation rubric across candidates.
