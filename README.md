@@ -5,7 +5,7 @@ IBM Internship Use Case: **AI HR Recruitment Assistant**
 ## What this project does
 
 1. HR enters a Job Description.
-2. HR uploads a candidate resume.
+2. HR upload s a candidate resume.
 3. The app extracts resume text.
 4. RAG retrieves relevant HR/recruitment knowledge.
 5. An AI agent uses tools for skill extraction and match scoring.
