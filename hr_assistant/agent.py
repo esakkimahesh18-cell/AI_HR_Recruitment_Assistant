@@ -10,15 +10,28 @@ from .tools import (
 
 
 def create_recruitment_agent():
-    model_name = os.getenv("OLLAMA_MODEL", "qwen2.5:1.5b")
+    model_name = os.getenv(
+        "OLLAMA_MODEL",
+        "qwen2.5:1.5b"
+    )
+
+    ollama_url = os.getenv(
+        "OLLAMA_BASE_URL",
+        "http://localhost:11434"
+    )
 
     return ChatOllama(
         model=model_name,
+        base_url=ollama_url,
         temperature=0,
     )
 
 
-def analyze_candidate(job_description: str, resume_text: str) -> str:
+def analyze_candidate(
+    job_description: str,
+    resume_text: str
+) -> str:
+
     # 1. Extract skills from Job Description
     required_skills = extract_skills.invoke({
         "text": job_description
@@ -37,16 +50,21 @@ def analyze_candidate(job_description: str, resume_text: str) -> str:
 
     # 4. Retrieve HR knowledge using RAG
     hr_knowledge = search_hr_knowledge.invoke({
-        "query": "recruitment policy interview guidelines technical roles"
+        "query": (
+            "recruitment policy "
+            "interview guidelines "
+            "technical roles"
+        )
     })
 
-    # 5. Ask the local LLM to generate the final report
+    # 5. Ask Ollama LLM to generate the final report
     prompt = f"""
 You are an AI HR Recruitment Assistant.
 
 Analyze the candidate strictly using the information provided below.
 
 IMPORTANT RULES:
+
 1. Do not invent candidate skills.
 2. Do not invent job requirements.
 3. Do not create individual skill percentages.
@@ -100,6 +118,7 @@ Explain the recommendation briefly using job-related evidence.
 
 ## Interview Questions
 Generate 5 relevant technical interview questions.
+
 Include:
 - questions about required technical skills
 - questions about relevant projects
@@ -109,8 +128,10 @@ Include:
 State clearly that the AI recommendation is advisory and the final hiring decision must be made by a human recruiter.
 """
 
+    # Create Ollama model
     llm = create_recruitment_agent()
 
+    # Generate response
     response = llm.invoke(prompt)
 
     return response.content
